@@ -48,6 +48,7 @@ public class MyList {
             }
             this.list = newList;
         }
+        //Galima keisti reiksme ne kuriant naujo masyvo!!!!!!
     }
 
     // gudriems
@@ -73,8 +74,18 @@ public class MyList {
         return this.list.length;
     }
 
+    @Override
     public String toString() {
-        return "[" + "]";
+        String test = "";
+        for (int i = 0; i < this.list.length; i++) {
+            if (i == 0) {
+                test += this.list[i];
+            } else {
+                test += ", " + this.list[i];
+            }
+
+        }
+        return "[" + test + "]";
     }
 
     public void printAll() {
